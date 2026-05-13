@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funel - Sustainable & Smart Sensing Solutions | Global Expert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        :root {
+            --deep-green: #1a332d;
+            --brand-green: #2d5a27;
+            --accent-teal: #348e84;
+            --dark-charcoal: #1a1a1a;
+            --slate-gray: #2c2c2c;
+            --off-white: #f8fbf9;
+            --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            line-height: 1.7; 
+            color: var(--dark-charcoal); 
+            background: var(--white); 
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 800; }
+        .uppercase { text-transform: uppercase; letter-spacing: 2px; }
+        .text-gradient {
+            background: linear-gradient(135deg, #fff, var(--accent-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Header */
+        header { 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(10px);
+            padding: 15px 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 2000; 
+            box-shadow: 0 4px 30px rgba(0,0,0,0.03);
+        }
+        .header-top { 
+            display: flex; justify-content: space-between; align-items: center; 
+            font-size: 0.75rem; font-weight: 600; color: var(--text-muted); 
+            margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;
+        }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 50px; transition: transform 0.3s; }
+        .logo img:hover { transform: scale(1.05); }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a { font-weight: 700; font-size: 0.8rem; color: var(--deep-green); position: relative; }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
+            background: var(--accent-teal); transition: 0.3s;
+        }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* Hero Section - High Visual Impact */
+        .hero { 
+            height: 100vh;
+            background: linear-gradient(rgba(26, 51, 45, 0.7), rgba(26, 51, 45, 0.85)), 
+                        url('https://sc02.alicdn.com/kf/A0e055c9d8d844044b727857f2949d38bd.png');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            text-align: center; color: var(--white); padding: 0 20px;
+        }
+        .hero-tag { font-size: 0.9rem; font-weight: 700; letter-spacing: 4px; margin-bottom: 20px; color: var(--accent-teal); }
+        .hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 30px; max-width: 1000px; text-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.3rem; margin-bottom: 40px; max-width: 800px; font-weight: 300; opacity: 0.9; }
+        .btn-premium { 
+            display: inline-block; padding: 18px 50px; background: var(--accent-teal); color: var(--white); 
+            font-weight: 800; letter-spacing: 2px; border: 2px solid var(--accent-teal); 
+            transition: 0.4s; position: relative; overflow: hidden;
+        }
+        .btn-premium:hover { background: transparent; color: var(--white); border-color: var(--white); transform: translateY(-3px); }
+
+        /* Language Bar */
+        .lang-bar { background: var(--off-white); padding: 12px 0; border-bottom: 1px solid #eee; overflow: hidden; }
+        .lang-list { display: flex; justify-content: center; gap: 25px; flex-wrap: nowrap; animation: scrollLang 40s linear infinite; }
+        @keyframes scrollLang { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .lang-item { display: flex; align-items: center; gap: 8px; font-size: 0.7rem; font-weight: 600; white-space: nowrap; }
+        .lang-item img { width: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+        /* Section Global Styling */
+        section { padding: 120px 0; }
+        .section-header { text-align: center; margin-bottom: 80px; }
+        .section-header h2 { font-size: 3rem; color: var(--deep-green); margin-bottom: 20px; }
+        .section-header span { display: block; width: 60px; height: 4px; background: var(--accent-teal); margin: 0 auto; }
+
+        /* Brand History - Interactive Timeline */
+        .history-container { position: relative; padding: 40px 0; }
+        .history-line { position: absolute; top: 50%; left: 0; width: 100%; height: 2px; background: #e0e0e0; z-index: 1; }
+        .history-grid { display: flex; justify-content: space-between; position: relative; z-index: 2; }
+        .history-node { width: 120px; text-align: center; transition: 0.3s; }
+        .history-node:hover { transform: translateY(-10px); }
+        .history-dot { width: 15px; height: 15px; background: var(--accent-teal); border-radius: 50%; margin: 15px auto; border: 3px solid #fff; box-shadow: 0 0 10px rgba(52, 142, 132, 0.5); }
+        .history-year { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.4rem; color: var(--deep-green); }
+        .history-desc { font-size: 0.7rem; font-weight: 500; color: var(--text-muted); opacity: 0; transition: 0.3s; }
+        .history-node:hover .history-desc { opacity: 1; }
+
+        /* Selling Market - Global Impact */
+        .market-section { 
+            background: linear-gradient(rgba(26, 51, 45, 0.9), rgba(26, 51, 45, 0.9)), 
+                        url('https://sc02.alicdn.com/kf/Afc06f5c96f88465faaea01c9592b0f5fY.png');
+            background-size: cover; background-position: center; color: #fff; text-align: center;
+        }
+        .market-content h3 { font-size: 3.5rem; margin-bottom: 20px; }
+        .market-content p { font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto; }
+
+        /* Core Products - High Tech Showcase */
+        .products-showcase { background: var(--off-white); }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .product-card { 
+            background: #fff; padding: 40px; border-radius: 20px; text-align: center; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid #f0f0f0; transition: 0.5s;
+        }
+        .product-card:hover { transform: translateY(-15px); border-color: var(--accent-teal); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+        .product-icon { width: 150px; height: 120px; margin: 0 auto 30px; overflow: hidden; }
+        .product-icon img { width: 100%; height: 100%; object-fit: contain; }
+        .product-card h4 { font-size: 1.4rem; margin-bottom: 15px; color: var(--deep-green); }
+        .product-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* Team & Support - GIFs Integrated */
+        .team-section { text-align: center; }
+        .team-grid { display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; margin-top: 50px; }
+        .team-member { width: 220px; }
+        .team-photo { 
+            width: 180px; height: 180px; border-radius: 50%; overflow: hidden; 
+            margin: 0 auto 20px; border: 4px solid var(--accent-teal); box-shadow: 0 10px 30px rgba(52, 142, 132, 0.2);
+        }
+        .team-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .team-member h4 { font-size: 1.3rem; margin-bottom: 5px; color: var(--deep-green); }
+        .team-member p { font-size: 0.85rem; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; }
+
+        /* Projects - AI Image Integration */
+        .projects-section { 
+            background: linear-gradient(to bottom, #fff, var(--off-white)); 
+        }
+        .project-featured {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px;
+        }
+        .project-img-box { border-radius: 30px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.1); }
+        .project-img-box img { width: 100%; transition: 0.8s; }
+        .project-img-box:hover img { transform: scale(1.1); }
+        .project-info h3 { font-size: 2.5rem; margin-bottom: 25px; color: var(--deep-green); }
+
+        /* Why Choose Us - Corporate Professionalism */
+        .why-section { background: var(--deep-green); color: #fff; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+        .why-card { padding: 40px; border-radius: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.3s; }
+        .why-card:hover { background: rgba(255, 255, 255, 0.1); }
+        .why-card i { font-size: 2.5rem; color: var(--accent-teal); margin-bottom: 25px; }
+        .why-card h4 { font-size: 1.2rem; margin-bottom: 15px; font-family: 'Montserrat', sans-serif; font-weight: 700; }
+        .why-card p { font-size: 0.9rem; opacity: 0.7; }
+
+        /* Contact Section - Premium Form */
+        .contact-premium { background: #fff; }
+        .contact-box { 
+            background: var(--white); display: grid; grid-template-columns: 1fr 1fr; 
+            box-shadow: 0 50px 100px rgba(0,0,0,0.05); border-radius: 40px; overflow: hidden;
+        }
+        .contact-details { background: var(--deep-green); color: #fff; padding: 80px; position: relative; overflow: hidden; }
+        .contact-details::after {
+            content: ''; position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px;
+            background: var(--accent-teal); border-radius: 50%; opacity: 0.2;
+        }
+        .contact-form { padding: 80px; }
+        .input-group { margin-bottom: 30px; }
+        .input-group label { display: block; font-weight: 700; font-size: 0.8rem; margin-bottom: 10px; color: var(--text-muted); }
+        .input-group input, .input-group textarea { 
+            width: 100%; padding: 15px; border: none; border-bottom: 2px solid #eee; 
+            font-family: inherit; font-size: 1rem; transition: 0.3s;
+        }
+        .input-group input:focus, .input-group textarea:focus { border-color: var(--accent-teal); outline: none; }
+
+        /* Footer */
+        footer { background: var(--dark-charcoal); color: #888; padding: 100px 0 50px; text-align: center; }
+        .footer-logo { height: 50px; margin-bottom: 40px; filter: brightness(0) invert(1); }
+        .footer-links { display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; font-weight: 600; font-size: 0.8rem; }
+        .footer-social { display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; }
+        .footer-social a { width: 45px; height: 45px; border-radius: 50%; border: 1px solid #333; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+        .footer-social a:hover { background: var(--accent-teal); border-color: var(--accent-teal); color: #fff; }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 3rem; }
+            .project-featured, .contact-box { grid-template-columns: 1fr; }
+            .contact-details, .contact-form { padding: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <span>SHAANXI FUNAIER TRADING CO., LTD. | Est. 2013</span>
+                <span><i class="fas fa-certificate"></i> 20+ Years OEM/ODM Excellence</span>
+            </div>
+            <nav>
+                <div class="logo">
+                    <img src="https://sc01.alicdn.com/kf/A3c7ffd887d834089be64f7e5c5091b0ba.png" alt="Funel Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">HISTORY</a></li>
+                    <li><a href="#products">SOLUTIONS</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONNECT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="lang-bar">
+        <div class="lang-list">
+            <div class="lang-item"><img src="https://flagcdn.com/w20/us.png"> English</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/cn.png"> 中文</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/de.png"> Deutsch</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/pt.png"> Português</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/es.png"> Español</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/fr.png"> Français</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/ru.png"> Pусский</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/jp.png"> 日本語</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/kr.png"> 한국어</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/vn.png"> Tiếng Việt</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/tr.png"> Türk</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/id.png"> Indonesian</div>
+        </div>
+    </div>
+
+    <section id="home" class="hero">
+        <div data-aos="fade-up">
+            <p class="hero-tag uppercase">Global Industrial Solutions</p>
+            <h1>DEDICATE TO SUSTAINABLE & <span class="text-gradient">SMART SENSING</span> SOLUTIONS</h1>
+            <p>20 Years of expertise in pressure, level, flow, and water quality analysis instrumentation. Connecting China's manufacturing power with global industry.</p>
+            <a href="#contact" class="btn-premium">START CONSULTATION</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="uppercase">Brand History</h2>
+            <span></span>
+        </div>
+        <div class="history-container" data-aos="fade-up">
+            <div class="history-line"></div>
+            <div class="history-grid">
+                <div class="history-node">
+                    <div class="history-year">2013</div>
+                    <div class="history-dot"></div>
+                    <div class="history-desc">R&D Foundation for Water Analysis.</div>
+                </div>
+                <div class="history-node">
+                    <div class="history-year">2015</div>
+                    <div class="history-dot"></div>
+                    <div class="history-desc">Funel established in Shaanxi.</div>
+                </div>
+                <div class="history-node">
+                    <div class="history-year">2017</div>
+                    <div class="history-dot"></div>
+                    <div class="history-desc">Chemical Application Mastery.</div>
+                </div>
+                <div class="history-node">
+                    <div class="history-year">2019</div>
+                    <div class="history-dot"></div>
+                    <div class="history-desc">Global Markets Expansion.</div>
+                </div>
+                <div class="history-node">
+                    <div class="history-year">2021</div>
+                    <div class="history-dot"></div>
+                    <div class="history-desc">One-stop Automation Launch.</div>
+                </div>
+                <div class="history-node">
+                    <div class="history-year">2023</div>
+                    <div class="history-dot"></div>
+                    <div class="history-desc">Turnkey Project Dept. Formed.</div>
+                </div>
+                <div class="history-node">
+                    <div class="history-year">2025</div>
+                    <div class="history-dot"></div>
+                    <div class="history-desc">Alibaba Int. Station Live.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products-showcase">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="uppercase">Core Sensing Solutions</h2>
+                <span></span>
+            </div>
+        <div class="products-grid">
+            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-icon"><img src="https://sc01.alicdn.com/kf/A44ff5a04ec514410b122d33660d8ff11g.png" alt="Industrial pH / ORP"></div>
+                <h4>Industrial pH / ORP</h4>
+                <p>High-performance sensing for chemical processes and harsh industrial wastewater.</p>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-icon"><img src="https://sc01.alicdn.com/kf/A8ac12aed643e496e93e3018beeb2f683P.png" alt="Dissolved Oxygen"></div>
+                <h4>Dissolved Oxygen</h4>
+                <p>Precision monitoring for aquaculture, sewage treatment, and environmental protection.</p>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-icon"><img src="https://sc01.alicdn.com/kf/Ac8f8d74a238443a89e207b9cdcebd5d70.png" alt="Turbidity & TSS"></div>
+                <h4>Turbidity & TSS</h4>
+                <p>Advanced optical sensors for clear water and high-solids concentration monitoring.</p>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="product-icon"><img src="https://sc01.alicdn.com/kf/A402581a9264d406c9b754414f5673265K.png" alt="Smart Controllers"></div>
+                <h4>Smart Controllers</h4>
+                <p>Multi-parameter integration with IoT connectivity for remote management.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="uppercase">Our Expert Support</h2>
+                <span></span>
+            </div>
+            <div class="team-grid">
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="team-photo"><img src="https://sc01.alicdn.com/kf/A720b719527b348429868ebd8f58e361bc.png"></div>
+                    <h4>CLAIRE</h4>
+                    <p>Sales Manager</p>
+                </div>
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="team-photo"><img src="https://sc01.alicdn.com/kf/A3e6643f2173f4f06b6b54b1a98c851930.png"></div>
+                    <h4>LILY</h4>
+                    <p>Technical Engineer</p>
+                </div>
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-photo"><img src="https://sc01.alicdn.com/kf/A932947a078644711aaf665e83bcf9614j.png"></div>
+                    <h4>ERIC</h4>
+                    <p>After-sales Repair Engineer</p>
+                </div>
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="team-photo"><img src="https://sc01.alicdn.com/kf/A1f04dbd391ea4892b03e4272233302ccf.png"></div>
+                    <h4>MINNIE</h4>
+                    <p>Product Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why" class="why-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="uppercase" style="color: #fff;">Why Industry Leaders Choose Funel</h2>
+                <span></span>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-aos="fade-up">
+                    <i class="fas fa-microchip"></i>
+                    <h4>Tech-First Customization</h4>
+                    <p>We design technical proposals based on your specific temperature, pressure, and media conditions.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-tools"></i>
+                    <h4>HACH Repair Services</h4>
+                    <p>Professional HACH laboratory instrument maintenance and repair to extend your equipment lifespan.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-shield-check"></i>
+                    <h4>Quality Assurance</h4>
+                    <p>Multi-layered inspection and calibration before every shipment ensures zero-defect delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-premium">
+        <div class="container">
+            <div class="contact-box" data-aos="fade-up">
+                <div class="contact-details">
+                    <h2 class="uppercase">Start Your Journey</h2>
+                    <p style="margin-bottom: 40px; opacity: 0.8;">Need a custom solution for your industrial water process? Our senior engineers are ready to assist.</p>
+                    <div style="line-height: 3;">
+                        <p><i class="fas fa-phone-alt" style="color: var(--accent-teal); margin-right: 15px;"></i> +86-15606523212</p>
+                        <p><i class="fas fa-user-cog" style="color: var(--accent-teal); margin-right: 15px;"></i> Expert Team: Claire, Lily, Eric & Minnie</p>
+                        <p><i class="fas fa-envelope" style="color: var(--accent-teal); margin-right: 15px;"></i> Claire@funel-sensor.com</p>
+                        <p><i class="fas fa-shield-alt" style="color: var(--accent-teal); margin-right: 15px;"></i> Alibaba Trade Assurance Support</p>
+                    </div>
+                    <div style="margin-top: 60px;">
+                        <a href="https://sxfne1688.en.alibaba.com/" target="_blank" class="btn-premium" style="background: #ff6600; border-color: #ff6600;">VISIT ALIBABA SHOP</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="input-group">
+                            <label class="uppercase">Full Name</label>
+                            <input type="text" placeholder="John Doe" required>
+                        </div>
+                        <div class="input-group">
+                            <label class="uppercase">Business Email</label>
+                            <input type="email" placeholder="john@company.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label class="uppercase">Inquiry Message (Repair / Products)</label>
+                            <textarea rows="5" placeholder="Tell us about your project or repair requirements..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-premium" style="width: 100%; background: var(--deep-green); border-color: var(--deep-green);">SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="https://sc01.alicdn.com/kf/A3c7ffd887d834089be64f7e5c5091b0ba.png" alt="Funel Logo" class="footer-logo">
+            <div class="footer-links">
+                <a href="#home">HOME</a>
+                <a href="#about">HISTORY</a>
+                <a href="#products">SOLUTIONS</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+            <p style="font-size: 0.75rem;">&copy; 2026 Shaanxi Funaier Trading Co., Ltd. | High-End Sensing & HACH Repair Specialist.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
