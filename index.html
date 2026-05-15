@@ -182,6 +182,35 @@
         }
         .input-group input:focus, .input-group textarea:focus { border-color: var(--accent-teal); outline: none; }
 
+        /* Social Sidebar */
+        .social-sidebar {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 2000;
+        }
+        .social-sidebar a {
+            width: 45px;
+            height: 45px;
+            background: var(--white);
+            color: var(--deep-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .social-sidebar a:hover {
+            background: var(--accent-teal);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
         /* Footer */
         footer { background: var(--dark-charcoal); color: #888; padding: 100px 0 50px; text-align: center; }
         .footer-logo { height: 50px; margin-bottom: 40px; filter: brightness(0) invert(1); }
@@ -232,10 +261,17 @@
             <div class="lang-item"><img src="https://flagcdn.com/w20/ru.png"> Pусский</div>
             <div class="lang-item"><img src="https://flagcdn.com/w20/jp.png"> 日本語</div>
             <div class="lang-item"><img src="https://flagcdn.com/w20/kr.png"> 한국어</div>
-            <div class="lang-item"><img src="https://flagcdn.com/w20/vn.png"> Tiếng Việt</div>
+            <div class="lang-item"><img src="https://flagcdn.com/w20/vn.png"> Tiếng Liam</div>
             <div class="lang-item"><img src="https://flagcdn.com/w20/tr.png"> Türk</div>
             <div class="lang-item"><img src="https://flagcdn.com/w20/id.png"> Indonesian</div>
         </div>
+    </div>
+
+    <div class="social-sidebar">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
 
     <section id="home" class="hero">
@@ -352,6 +388,36 @@
                     <h4>MINNIE</h4>
                     <p>Product Manager</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="factory" class="projects-section" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="uppercase">Manufacturing Excellence</h2>
+                <span></span>
+                <p style="margin-top: 20px; font-weight: 600;">20,000+ Sqm Modern Production Base & High-Precision Calibration Lab</p>
+            </div>
+            
+            <div class="project-featured" data-aos="fade-up" style="margin-bottom: 40px;">
+                <div class="project-info">
+                    <p class="uppercase" style="color: var(--accent-teal); font-weight: 700; margin-bottom: 15px;">Advanced Production</p>
+                    <h3>FUNEL PH PRODUCTION LINE</h3>
+                    <p>Our dedicated pH sensor production line integrates digital monitoring and automated calibration, ensuring every Funel sensor meets the highest international precision standards.</p>
+                    <ul style="margin-top: 20px; line-height: 2.5; font-size: 0.9rem; font-weight: 600; color: var(--text-muted);">
+                        <li><i class="fas fa-check-circle" style="color: var(--accent-teal);"></i> 100% Pre-shipment Calibration & Testing</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--accent-teal);"></i> Specialized OEM/ODM Production Capacity</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--accent-teal);"></i> ISO 9001 Certified Quality Management</li>
+                    </ul>
+                </div>
+                <div class="project-img-box">
+                    <img src="https://sc01.alicdn.com/kf/A876b34c96b46491b91c05fcd7f9f81160.png" alt="Funel Production Line">
+                </div>
+            </div>
+
+            <div class="project-img-box" data-aos="fade-up">
+                <img src="https://sc01.alicdn.com/kf/Aef9c0ef2a173424396a575f4560d4a0cH.png" alt="Factory Floor Overview" style="width: 100%; border-radius: 30px;">
             </div>
         </div>
     </section>
